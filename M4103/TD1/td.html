@@ -4,14 +4,26 @@
     <meta charset="UTF-8">
     <title>Exercice 1</title>
 
-  <script type=""text/javascript">
-  window.alert("salut");
+  <script type="text/javascript">
+  function defTitre1() {
+  alert("salut");
+  }
+  defTitre1();
+  uneAutreFonction();
   </script>
-  <script type="text/javascript" src="my_function.js">
-    />
+
+  <script type="text/javascript">
+    //alert("salut");
+    function uneAutreFonction() {
+      alert(' salut: uneAutreFonctioon');
+    }
+    // defTitre1();
+    </script>
+
+  <script type="text/javascript" src="my_functions.js"></script>
 
 </head>
-<body>
+<body onload="defTitre1()">
 <h1 id="titre">Super un gros titre</h1>
 <h2> Un titre un peu moins gros</h2>
 <h2>Partie 2 du titre moins gros</h2>
