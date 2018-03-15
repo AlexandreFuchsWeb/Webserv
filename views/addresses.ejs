@@ -1,0 +1,33 @@
+<div>
+    <!--  <p>
+    <%= name %>
+  </p>
+  <p>
+    ADDRESS : <%= address %>
+  </p>
+  <p>
+    TRUC 1 : <%= un_obj.un_truc %>
+  </p>
+  <p>
+    TAB[0] : <%= mon_tableau[0] %>
+  </p>
+  <p>
+    TAB[1] : <%= mon_tableau[1] %>
+  </p>
+  <p>
+    TABjs[1_1] : <%= mon_tableau_js[0].champ_1 %>
+  </p>
+  <p>
+    TABjs[2_1] : <%= mon_tableau_js[1].champ_1 %>
+  </p>
+  <p>
+    TABjs[1_2] : <%= mon_tableau_js[0].champ_2 %>
+  </p>-->
+    <p>
+    <ul>
+        <% for(var i=0; i<lesadresses.length; i++) { %>
+        <li><%= lesadresses[i].number%>, <%= lesadresses[i].street%> - <%= lesadresses[i].city%></li>
+        <% } %>
+    </ul>
+    </p>
+</div>
