@@ -1,0 +1,27 @@
+Ex1 :
+
+1.1
+
+C'est l'évent onLoad
+document.getElementById('id')
+innerHTML
+document.getElementsByTagName('h2')
+document.getElementsByTagName('h2').length
+document.querySelector('.firstOrLast')
+nombre % 2 === 0
+
+1.2
+
+Certains sont des standards et d'autres des adaptations
+Oui ducoup
+
+1.3
+
+on selectionne le premier (index 0)
+on selectionne dernier (index length - 1)
+
+Différence en millisecondes entre "now" et notre date. On divise le résultat par la durée en en millisecondes d'1 jour. -> On met en absoluy pour éviter les données négatives
+On peut mettre à jour le  innerHTML
+setInterval car elle est plus active
+
+

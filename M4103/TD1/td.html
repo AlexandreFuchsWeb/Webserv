@@ -1,34 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Exercice 1</title>
+  <meta charset="UTF-8">
+  <meta name="author" content="A.Fuchs" />
+  <meta name="description" content="TP1 A413" />
+  <meta name="keywords" content="exercice 1, HTML, JAVASCRIPT" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Exercice 1</title>
+</head>
 
-  <script type="text/javascript">
-  function defTitre1() {
-  alert("salut");
-  }
-  defTitre1();
-  uneAutreFonction();
-  </script>
+<body>
+<h1 class="firstOrLast" id="titre">Gros titre H1</h1>
+<h2>Moyen titre H2</h2>
+<h2 class="firstOrLast">Second H2</h2>
+<h3 class="firstOrLast">Petit titre H3</h3>
+<h3>Deuxième H3</h3>
+<h3>Troisième H3</h3>
 
-  <script type="text/javascript">
-    //alert("salut");
-    function uneAutreFonction() {
-      alert(' salut: uneAutreFonctioon');
-    }
-    // defTitre1();
-    </script>
+<div>
+  <p>J'aime le <span>magnifique JS</span> le vendredi</p>
+</div>
+
+<div>
+  <p>Mais beaucoup moins <span>l'algo</span> du jeudi</p>
+</div>
+
+<p id="nbjour">Il reste xxxx jours avant le 20 août 2018</p>
+
+<div id="date_modif"></div>
+<p id="horloge1"></p>
+<p id="horloge2"></p>
+<p id="grafH"></p>
+
+<form action="#" method="post">
+  <input id="input" type="text" class="blanc">
+</form>
 
   <script type="text/javascript" src="my_functions.js"></script>
-
-</head>
-<body onload="defTitre1()">
-<h1 id="titre">Super un gros titre</h1>
-<h2> Un titre un peu moins gros</h2>
-<h2>Partie 2 du titre moins gros</h2>
-<h3> Sous titre 1 </h3>
-<h3>Sous titre 2</h3>
-<h3>Sous titre 3</h3>
 </body>
+
 </html>
