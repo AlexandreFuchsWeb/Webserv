@@ -1,3 +1,6 @@
+/!\ Je ne comprends pas pourquoi parfois les horloges apparaissent, parfois non,
+sans aucunes raisons ... Alors que je pense que mon code est bon ... /!\
+C'est comme si les éléments se superposaient mais je ne trouve pas la raison
 Ex1 :
 
 1.1
@@ -23,5 +26,9 @@ on selectionne dernier (index length - 1)
 Différence en millisecondes entre "now" et notre date. On divise le résultat par la durée en en millisecondes d'1 jour. -> On met en absoluy pour éviter les données négatives
 On peut mettre à jour le  innerHTML
 setInterval car elle est plus active
+
+8.1
+J'ai utilisé oninput
+En changeant la classe ducoup
 
 

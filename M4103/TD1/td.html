@@ -26,17 +26,59 @@
   <p>Mais beaucoup moins <span>l'algo</span> du jeudi</p>
 </div>
 
-<p id="nbjour">Il reste xxxx jours avant le 20 août 2018</p>
 
 <div id="date_modif"></div>
+
+
+<p id="dateCount" onclick="majNbJours()">il reste xxx jours avant le 19 juillet 2018</p>
+
 <p id="horloge1"></p>
 <p id="horloge2"></p>
-<p id="grafH"></p>
+
+<div id="grafHorloge"></div>
 
 <form action="#" method="post">
-  <input id="input" type="text" class="blanc">
+  <input id="input" type="text" class="blanc" oninput="swapcolor()"/>
 </form>
 
+<aside>
+  <ul id="menu">
+    <li onclick="unroll(0)">Global
+      <ul>
+        <li><a href="#">Alexandre fuchs</a></li>
+        <li><a href="#">IUT Informatique</a></li>
+      </ul>
+    </li>
+
+    <li onclick="unroll(1)">Projets
+      <ul>
+        <li><a href="#">Escape Game</a></li>
+        <li><a href="#">Node</a></li>
+        <li><a href="#">Javascript</a></li>
+        <li><a href="#">PPP</a></li>
+      </ul>
+    </li>
+
+    <li onclick="unroll(2)">Activitées
+      <ul>
+        <li><a href="#">Sport</a></li>
+        <li><a href="#">Cours</a></li>
+        <li><a href="#">Ski alpin</a></li>
+        <li><a href="#">Coding</a></li>
+        <li><a href="#">Dormir</a></li>
+      </ul>
+    </li>
+
+    <li onclick="unroll(3)">Personnel
+      <ul>
+        <li><a href="#">Loisirs</a></li>
+      </ul>
+    </li>
+  </ul>
+</aside>
+<br />
+
+<p><input type="text"/><input type="button" value="find" onclick="find()"/></p>
   <script type="text/javascript" src="my_functions.js"></script>
 </body>
 

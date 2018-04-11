@@ -7,3 +7,33 @@
 .rouge {
   background-color: rgb(255, 150, 150);
 }
+
+#menu>li{
+  border : 2px dotted black;
+  border-radius: 5px;
+  list-style-position: inside;
+  background: green;
+  color: yellow;
+  margin-bottom: 15px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  width: 300px;
+}
+#menu a{
+  color: yellow;
+}
+#menu>li>ul>li{
+  list-style:none;
+}
+#menu>li>ul{
+  background: black;
+  display: none;
+
+}
+.menuTitle{
+  padding-left: 200px;
+}
+
+.rech{
+  background: yellow;
+}
