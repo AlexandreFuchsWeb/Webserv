@@ -1,5 +1,5 @@
 addEventListener("load", init);
-
+var ensemble
 // Initialisation de toutes mes fonctions
 function init() {
   defTitre1();
@@ -8,18 +8,16 @@ function init() {
   defTitre4();
   inverseTexte();
   datemodif();
-  unroll();
+  unroll(-1);
   var nbrecherche = document.getElementsByName("nbRecherche")[0];
-  document.getElementById("date_modif").addEventListener("click", majNbJours);
   majHorloge1();
   majGrafH();
   majHorloge2();
-  majNbJours();
   swapcolor();
-  find();
+ // find();
   window.setInterval(majHorloge1,1000);
   window.setInterval(majGrafH,1000);
-  console.log(nbrecherche.value);
+ // console.log(nbrecherche.value);
 }
 
 
@@ -69,17 +67,17 @@ function datemodif() {
   var date = new Date(document.lastModified);2
   date_modif.innerText = "Dernière modif le " + GetDay(date.getDay()) + " " + ('0' + date.getDate()).slice(-2) + " " + GetMonth(date.getMonth()) + " " + date.getFullYear() + " " + " par " + author.item(author.count).attributes["content"].nodeValue; + "."
 }
-function majNbJours() {
-  var target = new Date(2018,6,19,0,0,0,0);
-  var now = Date.now();
 
-  var result =  Math.ceil((target.valueOf() - now)/ (1000 * 3600 * 24));
 
-  var dateCount = document.getElementById("dateCount");
-  dateCount.innerText = dateCount.innerText.replace("xxx", result);
+function majNbJours(){
+  var dateFinale = Date.parse("19 Jul 2018 00:00:00 GMT")/86400000;
+  var dateAuj = Date.now()/86400000;
+  var dateDiff = (dateFinale-dateAuj).toFixed(0);
 
-  if(result <= 1){
-    dateCount.innerText = dateCount.innerText.replace("jours", "jour");
+  document.getElementById("19Juillet").innerText = document.getElementById("19Juillet").innerText.replace("xxx",dateDiff);
+
+  if(dateDiff == 1){
+    document.getElementById("19Juillet").innerText = document.getElementById("19Juillet").innerText.replace("jours","jour");
   }
 }
 
@@ -104,7 +102,7 @@ function majGrafH() {
       grafHorloge.innerHTML += ":";
     }
     else{
-      grafHorloge.innerHTML += "<img src=\" images/" + string[i] + ".gif\" alt =\"" + string[i] + "\">";
+      grafHorloge.innerHTML += "<img src=\" images/" + string[i] + ".gif\" alt =\"" + string[i] + "\">"; // on récupère les images et on incrémente
     }
   }
 }
@@ -133,10 +131,10 @@ function unroll(i){
 
   if(i!=-1){
     listStyle = lis[i].getAttribute("style");
-    if(listStyle.valueOf() == "list-style-image: url('images/plus.gif');"){
-      lis[i].setAttribute("style","list-style-image: url('images/minus.gif');");
+    if(listStyle.valueOf() == "list-style-image: url('images/plus.gif');"){ // si actuellement c'est +
+      lis[i].setAttribute("style","list-style-image: url('images/minus.gif');"); // alors on met -
       ul = lis[i].firstElementChild;
-      ul.setAttribute("style","display: block;");
+      ul.setAttribute("style","display: block;"); // et on ferme
     }else{
       lis[i].setAttribute("style","list-style-image: url('images/plus.gif');");
       ul = lis[i].firstElementChild;
@@ -145,23 +143,15 @@ function unroll(i){
   }
 }
 
-function find(){
+// function find(){
 
-  var mot = document.querySelectorAll("input")[1].value;
-  var nbrecherche = document.getElementsByName("nbRecherche")[0].value;
+//  var mot = document.querySelectorAll("input")[1].value;
+//  var nbrecherche = document.getElementsByName("nbRecherche")[0].value;
 
-  if(nbrecherche=='0'){
-    var text = document.querySelector("body").innerText;
-    text.replace(mot, "yeah");//"<spam class=\"rech\">"+mot+"</spam>");
-    console.log("nice ");
-    console.log(text);
-    console.log(mot);
-  }
+// if(nbrecherche=='0'){
+//   var text = document.querySelector("body").innerText;
 
-  document.getElementsByName("nbRecherche")[0].setAttribute("value","1");
-  nbrecherche = document.getElementsByName("nbRecherche")[0].value;
-
-}
+//}
 //on rajoute les bases
 
 function GetMonth(month) {

@@ -1,6 +1,4 @@
-/!\ Je ne comprends pas pourquoi parfois les horloges apparaissent, parfois non,
-sans aucunes raisons ... Alors que je pense que mon code est bon ... /!\
-C'est comme si les éléments se superposaient mais je ne trouve pas la raison
+/!\ Je n'ai pas euj le temps de finir le find, je laisse donc les traces mais il ne s'affiche pas dans le html /!\
 Ex1 :
 
 1.1
