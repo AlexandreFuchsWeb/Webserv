@@ -14,7 +14,7 @@ function init() {
   majGrafH();
   majHorloge2();
   swapcolor();
- // find();
+  // find();
   window.setInterval(majHorloge1,1000);
   window.setInterval(majGrafH,1000);
  // console.log(nbrecherche.value);
