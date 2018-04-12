@@ -11,7 +11,8 @@
 </head>
 
 <body onload="init">
-<h1 class="firstOrLast" id="titre">Gros titre H1</h1>
+
+  <h1 class="firstOrLast" id="titre">Gros titre H1</h1>
 <h2>Moyen titre H2</h2>
 <h2 class="firstOrLast">Second H2</h2>
 <h3 class="firstOrLast">Petit titre H3</h3>
@@ -34,10 +35,10 @@
 <br />
 <div id="19Juillet" onclick="majNbJours()">il reste xxx jours avant le 19 juillet 2018</div>
 <br />
-<p></p>
+<div></div>
 
-<p id="horloge1"></p>
-<p id="horloge2"></p>
+<div id="horloge1"></div>
+<div id="horloge2"></div>
 
 <div id="grafHorloge"></div>
 
@@ -82,7 +83,8 @@
 </aside>
 <br />
 
-<p><input type="text"/><input type="button" value="find" onclick="find()"/></p>
+
+  <input type="text" id="recherche"/><input type="button" value="chaine" onclick="recherche(document.getElementById('recherche').value);"/>
   <script type="text/javascript" src="my_functions.js"></script>
 </body>
 

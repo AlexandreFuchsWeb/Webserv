@@ -14,6 +14,7 @@ function init() {
   majGrafH();
   majHorloge2();
   swapcolor();
+  sauvegarde();
   // find();
   window.setInterval(majHorloge1,1000);
   window.setInterval(majGrafH,1000);
@@ -143,15 +144,29 @@ function unroll(i){
   }
 }
 
-// function find(){
+var bod
+function recherche(string){
+  document.body.innerHTML = bod;
 
-//  var mot = document.querySelectorAll("input")[1].value;
-//  var nbrecherche = document.getElementsByName("nbRecherche")[0].value;
+  var strings = string.split(" ");
 
-// if(nbrecherche=='0'){
-//   var text = document.querySelector("body").innerText;
+  for(i=0; i<strings.length; i++){
+    if (strings[i] != '') { // pour éviter de crasher quand il n'y a rien dans le champs
+      regExp = new RegExp('(' + strings[i] + ')', 'gi');
+      document.body.innerHTML = document.body.innerHTML.replace(regExp, "<span class='select'>" + strings[i] + "</span>");
+    }
+  }
 
-//}
+}
+function sauvegarde(){
+  bod = document.querySelector("body").innerHTML;
+}
+
+function rechercheInteractive(){
+
+}
+
+
 //on rajoute les bases
 
 function GetMonth(month) {
