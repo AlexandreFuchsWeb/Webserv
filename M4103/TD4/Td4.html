@@ -6,6 +6,8 @@
     <meta name="description" content="TP4 A413" />
     <meta name="keywords" content="AJAX" />
     <link rel="stylesheet" href="style.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <title>TD4 : Flux RSS</title>
 </head>
 <body>
@@ -15,10 +17,11 @@
         <option value=""></option>
         <option value="https://www.xul.fr/rss.xml">Xul</option>
         <option value="http://filuns.unice.fr/accueil/rss_view">Fil UNS</option
+        <option value="http://localhost:1337/address">localhost</option>
         <option value="https://www.lemonde.fr/rss/une.xml">Le Monde</option>
     </select>
 </form>
-
+<button id="choixVisible">Cliquez-moi !</button>
 <div id="ContenuRss"></div>
 <script type="text/javascript" src="javascript.js"></script>
 </body>

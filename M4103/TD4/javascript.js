@@ -1,3 +1,31 @@
+$(document).ready(function () {
+    $("#Choixrss").hide().change(function (event) {
+        if(!(event.target.value == "")) {
+            $("#ContenuRss").html('load');
+            (
+                "/",
+                {
+                    url: event.target.value
+                },
+                function () {
+                    $("#ContenuRss").html();
+                }
+            )
+                .fail(function () {
+                    $("#ContenuRss").html("Erreur");
+                });
+        }
+        else {
+            $("#ContenuRss").html('');
+        }
+
+    });
+
+
+    $("#choixVisible").click(function () {
+        $("#Choixrss").toggle();
+    });
+
 function init(){
     if(window.XMLHttpRequest)
         xhr = new XMLHttpRequest();
